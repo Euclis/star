@@ -15,3 +15,4 @@
 ![Alt text](https://github.com/Euclis/star/raw/master/screenshots/star-shot-3.jpg)
 
 ![Alt text](https://github.com/Euclis/star/raw/master/screenshots/star-shot-4.jpg)
+
