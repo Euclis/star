@@ -1,0 +1,577 @@
+.section {
+    position: relative;
+}
+
+/*顶部导航*/
+.top-nav {
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    z-index: 999;
+    height: 0.4rem;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+.top-nav .icon {
+    float: left;
+    margin-left: 1rem;
+}
+.icon a {
+    display: block;
+    height: 0.4rem;
+    width: 2.5rem;
+    background: url("../images/logo.png") no-repeat 0.05rem center;
+    background-size: 80%;
+}
+.top-nav .nav {
+    height: 0.4rem;
+    /*width: 500px;*/
+    float: right;
+    margin-right: 0.8rem;
+}
+.nav ul {
+    margin: 0;
+}
+.nav li {
+    float: left;
+    margin-right: 0.4rem;
+}
+.nav a {
+    display: block;
+    height: 0.4rem;
+    line-height: 0.4rem;
+    text-align: center;
+    font-size: 0.14rem;
+    color: #fff;
+}
+
+/*第一屏*/
+.first {
+    text-align: center;
+    color: #fff;
+    background: url("../images/bg1.jpg") no-repeat;
+    background-size: cover;
+}
+.first .title1 {
+    font-size: 0.6rem;
+    line-height: 1.2rem;
+    font-weight: 700;
+    font-family: "Microsoft Yahei";
+    opacity: 0;
+    text-shadow: 0.03rem 0.03rem 0.05rem #ccc;
+}
+.first .title2 {
+    font-size: 0.24rem;
+    line-height: 0.48rem;
+    opacity: 0.8;
+}
+.first .downloadBtn {
+    height: 0.5rem;
+    width: 2rem;
+    margin: 0.8rem auto 0;
+    cursor: pointer;
+    border-radius: 0.05rem;
+    font-size: 0.24rem;
+    line-height: 0.5rem;
+    background-image: linear-gradient(-235deg,
+    #009CFF 0%,
+    #00E6FF 100%
+    );
+}
+.first.current .title1{
+    opacity: 1;
+    transition: all 1.5s ease-out 0.3s;
+}
+
+/*第二屏*/
+.second {
+    text-align: center;
+    color: #fff;
+    background: url("../images/bg4.jpg");
+    background-size: cover;
+}
+.star {
+    // position: absolute;
+    // top: 50%;
+    // left: 1rem;
+    // margin-top: -2.8rem;
+    opacity: 0;
+    width: 50%;
+    float: left;
+}
+.star ul {
+    width: 6rem;
+    height: 6rem;
+    margin: 0 auto;
+    list-style: none;
+    position: relative;
+}
+.star li {
+    border: 1px solid #394057;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    border-radius: 50%;
+    animation-name: starmove;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+.star span {
+    width: 0.12rem;
+    height: 0.12rem;
+    position: absolute;
+    left: 50%;
+    top: 0;
+    transform: translate(-50%,-50%);
+    border-radius: 50%;
+}
+.star li:nth-child(1) {
+    width: 0.6rem;
+    height: 0.6rem;
+    border: none;
+    background-color: #c90;
+    box-shadow: 0 0 0.5rem #c90;
+    animation-duration: 5s;
+}
+.star li:nth-child(2) {
+    width: 1.2rem;
+    height: 1.2rem;
+    animation-duration: 6s;
+}
+.star li:nth-child(2) span {
+    background-color: yellow;
+}
+.star li:nth-child(3) {
+    width: 1.8rem;
+    height: 1.8rem;
+    animation-duration: 10s;
+}
+.star li:nth-child(3) span {
+    background-color: blue;
+}
+.star li:nth-child(4) {
+    width: 2.4rem;
+    height: 2.4rem;
+    animation-duration: 12s;
+}
+.star li:nth-child(4)>span {
+    background-color: green;
+    animation: starmove 2s linear infinite;
+}
+.star li:nth-child(4)>span span {
+    width: 0.06rem;
+    height: 0.06rem;
+    top: -0.08rem;
+    background-color: yellow;
+}
+.star li:nth-child(5) {
+    width: 3rem;
+    height: 3rem;
+    background-image: url("../images/asteroids_meteorids.png");
+    background-size: cover;
+    animation-duration: 25s;
+}
+.star li:nth-child(5) span {
+    background-color: red;
+}
+.star li:nth-child(6) {
+    width: 3.6rem;
+    height: 3.6rem;
+    animation-duration: 20s;
+}
+.star li:nth-child(6) span {
+    background-color: #CCC;
+}
+.star li:nth-child(7) {
+    width: 4.2rem;
+    height: 4.2rem;
+    animation-duration: 30s;
+}
+.star li:nth-child(7)>span {
+    background-color: green;
+}
+.star li:nth-child(7)>span span {
+    width: 0.15rem;
+    height: 0.15rem;
+    border: 0.02rem solid #CCC;
+    left: -0.04rem;
+    top: -0.04rem;
+    transform: skew(0deg, 45deg);
+}
+.second .info {
+    // position: absolute;
+    // top: 50%;
+    // right: 3rem;
+    // margin-top: -0.7rem;
+    width: 50%;
+    float: left;
+    margin-top: 2rem;
+}
+.second .title1 {
+    font-size: 0.6rem;
+    line-height: 1.2rem;
+    text-align: left;
+}
+.second .title2 {
+    font-size: 0.3rem;
+    line-height: 0.6rem;
+}
+.second.current .star{
+    opacity: 1;
+    transition: all 0.5s ease-out;
+}
+@keyframes starmove {
+    0% {
+        transform: translate(-50%,-50%) rotate(0deg);
+    }
+    100% {
+        transform: translate(-50%,-50%) rotate(360deg);
+    }
+}
+
+/*第三屏*/
+.third {
+    background: url("../images/bg3.jpg") no-repeat;
+    background-size: cover;
+}
+.stars {
+    position: absolute;
+    top: 50%;
+    width: 38.4rem;
+    height: 2.2rem;
+    margin-top: -2rem;
+    overflow: hidden;
+}
+.stars ul {
+    width: 76.8rem;
+    height: 2.2rem;
+    margin: 0;
+    padding: 0;
+    animation: starsmove 40s linear infinite;
+}
+.stars ul:hover {
+    animation-play-state: paused;
+}
+.stars li {
+    float: left;
+    margin: 0.1rem;
+}
+.stars img {
+    display: block;
+    height: 2rem;
+    width: 3rem;
+}
+.third .info {
+    line-height: 0.3rem;
+    color: #fff;
+    position: absolute;
+    top: 60%;
+    left: 1rem;
+}
+.third .title1 {
+    font-size: 0.14rem;
+}
+.third .title1 span {
+    font-size: 0.2rem;
+    font-weight: 700;
+}
+.third .title2 {
+    font-size: 0.14rem;
+}
+.third .title2 span {
+    font-size: 0.2rem;
+    font-weight: 700;
+    color: red;
+}
+@keyframes starsmove {
+    0%{
+        transform: translateX(0);
+    }
+    100%{
+        transform: translateX(-50%);
+    }
+}
+
+/*第四屏*/
+.fourth {
+    background: url("../images/bg2.jpg") no-repeat;
+    background-size: cover;
+}
+.fourth .title {
+    text-align: center;
+    color: #fff;
+    font-size: 0.8rem;
+    line-height: 1.6rem;
+    opacity: 0;
+    text-shadow: 0.08rem 0.08rem 0.08rem #000;
+    margin-top: 1rem;
+}
+.fourth .progress {
+    width: 4rem;
+    height: 0.2rem;
+    margin: 0 auto;
+    position: relative;
+}
+.progress .box {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg,
+    #000 0%,
+    #000 25%,
+    yellow 25%,
+    yellow 50%,
+    #000 50%,
+    #000 75%,
+    yellow 75%,
+    yellow 100%
+    );
+    background-size: 0.2rem 100%;
+    opacity: 0;
+    animation: progressmove 18s linear infinite 3.5s;
+}
+.topline,
+.rightline,
+.bottomline,
+.leftline {
+    position: absolute;
+    background-color: rgba(255, 255, 255, 0.5);
+    opacity: 0;
+}
+.topline,
+.bottomline {
+    width: 4rem;
+    height: 1px;
+}
+.rightline,
+.leftline {
+    height: 4rem;
+    width: 1px;
+}
+.topline {
+    top: 0;
+    transform: translateX(-100%);
+}
+.bottomline {
+    bottom: 0;
+    transform: translateX(100%);
+}
+.rightline {
+    right: 0;
+    top: 0;
+    transform: translateY(-100%);
+}
+.leftline {
+    left: 0;
+    top: 0;
+    transform: translateY(100%);
+}
+.fourth .backtop {
+    height: 0.22rem;
+    width: 0.8rem;
+    text-align: center;
+    color: #fff;
+    margin: 1.5rem auto 0;
+    font-size: 0.12rem;
+}
+.backtop a {
+    color: #fff;
+    /*font-size: 0.12rem;*/
+}
+.fourth .footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 0.6rem;
+    font-size: 0.14rem;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+.footer .copy {
+    color: #fff;
+}
+.footer span {
+    margin-left: 0.2rem;
+    line-height: 0.6rem;
+    font-size: 0.14rem;
+}
+.footer a {
+    margin-left: 0.05rem;
+    font-size: 0.1rem;
+    color: #fff;
+}
+.footer a:hover {
+    color: deepskyblue;
+}
+.fourth.current .title {
+    transition: all 1.5s linear;
+    opacity: 1;
+}
+.fourth.current .topline {
+    transition: all 1s ease-in-out 1.5s;
+    transform: translateX(0);
+    opacity: 1;
+}
+.fourth.current .bottomline {
+    transition: all 1s ease-in-out 1.5s;
+    transform: translateX(0);
+    opacity: 1;
+}
+.fourth.current .rightline {
+    transition: all 1s ease-in-out 1.5s;
+    transform: translateY(0);
+    opacity: 1;
+    height: 0.2rem;
+}
+.fourth.current .leftline {
+    transition: all 1s ease-in-out 1.5s;
+    transform: translateY(0);
+    opacity: 1;
+    height: 0.2rem;
+}
+.fourth.current .box {
+    transition: all 1s ease-in-out 2.5s;
+    opacity: 1;
+}
+@keyframes progressmove {
+    0%{
+        background-position: 0px center;
+    }
+    100%{
+        background-position: 4rem center;
+    }
+}
+
+/*每屏底部小图标*/
+.foot {
+    height: 0.3rem;
+    width: 100%;
+    position: absolute;
+    bottom: 0.3rem;
+    z-index: 999;
+    color: #fff;
+    text-align: center;
+}
+.foot p {
+    font-size: 0.12rem;
+}
+.foot i {
+    display: block;
+    font-size: 0.16rem;
+    animation: footmove 0.4s infinite alternate linear;
+}
+@keyframes footmove {
+    0%{
+        margin-top: -0.05rem;
+    }
+    100%{
+        margin-top: 0;
+    }
+}
+
+/*注册框*/
+.registerbox {
+    width: 5rem;
+    height: 5rem;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background-color: #222;
+    border-radius: 0.1rem;
+    display: none;
+}
+.registerbox ul {
+    margin: 0;
+    padding: 0.4rem;
+}
+.registerbox li {
+    display: flex;
+    margin: 0.3rem 0;
+    font-size: 0.16rem;
+    position: relative;
+}
+.registerbox label,
+.registerbox input {
+    display: block;
+    float: left;
+    height: 0.35rem;
+    box-sizing: border-box;
+}
+.registerbox label {
+    width: 1.4rem;
+    line-height: 0.3rem;
+    text-align: right;
+    margin-top: 0.02rem;
+    color: #fff;
+    padding: 0;
+}
+.registerbox input {
+    width: 2.4rem;
+    outline: none;
+    padding: 0.06rem;
+    font-size: 0.16rem;
+}
+.registerbox .code {
+    width: 1.55rem;
+}
+.registerbox .getcode {
+    width: 0.8rem;
+    text-align: center;
+    font-size: 0.12rem;
+    margin-left: 0.05rem;
+}
+.registerbox input[type=button] {
+    border: none;
+    background-color: #E64145;
+    border-radius: 0.05rem;
+    padding: 0;
+    color: #fff;
+    cursor: pointer;
+}
+.registerbox input[type=button]:active {
+    padding-left: 0.01rem;
+}
+.registerbox form i {
+    position: absolute;
+    top: 0.1rem;
+    right: 0.2rem;
+}
+.registerbox .icon-ok-sign {
+    color: #6BCA76;
+}
+.registerbox .icon-remove-sign {
+    color: #E64145;
+}
+.registerbox .delete {
+    position: absolute;
+    top: 0.1rem;
+    right: 0.2rem;
+    font-size: 0.24rem;
+    cursor: pointer;
+}
+
+/*侧边栏*/
+#menu {
+    position: fixed;
+    top: 50%;
+    margin-top: -0.65rem;
+    right: 0.2rem;
+}
+#menu li {
+    margin-top: 0.3rem;
+}
+#menu li:nth-child(1) {
+    margin-top: 0;
+}
+#menu a {
+    display: block;
+    height: 0.2rem;
+    width: 0.2rem;
+    border-radius: 50%;
+    background-color: #666;
+    opacity: 0.8;
+}
+#menu .active a {
+    background-color: #ccc;
+}

@@ -1,0 +1,496 @@
+body,html {
+    margin: 0;
+    padding: 0;
+}
+li {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+}
+.section {
+    position: relative;
+}
+
+/*顶部导航*/
+.top-nav {
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    z-index: 999;
+    height: 40px;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+.top-nav .icon {
+    float: left;
+    margin-left: 100px;
+}
+.icon a {
+    display: block;
+    height: 40px;
+    width: 250px;
+    background: url("../images/logo.png") no-repeat 5px center;
+    background-size: 80%;
+}
+.top-nav .nav {
+    height: 40px;
+    /*width: 500px;*/
+    float: right;
+    margin-right: 80px;
+}
+.nav ul {
+    margin: 0;
+}
+.nav li {
+    float: left;
+    margin-right: 40px;
+}
+.nav a {
+    display: block;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    font-size: 14px;
+    color: #fff;
+}
+
+/*第一屏*/
+.first {
+    text-align: center;
+    color: #fff;
+    background: url("../images/bg1.jpg") no-repeat;
+    background-size: cover;
+}
+.first .title1 {
+    font-size: 60px;
+    line-height: 120px;
+    font-weight: 700;
+    font-family: "Microsoft Yahei";
+    opacity: 0;
+    text-shadow: 3px 3px 5px #ccc;
+}
+.first .title2 {
+    font-size: 24px;
+    line-height: 48px;
+    opacity: 0.8;
+}
+.first .downloadBtn {
+    height: 50px;
+    width: 200px;
+    margin: 80px auto 0;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 24px;
+    line-height: 50px;
+    background-image: linear-gradient(-235deg,
+        #009CFF 0%,
+        #00E6FF 100%
+    );
+}
+.first.current .title1{
+    opacity: 1;
+    transition: all 2s ease-out 0.3s;
+}
+
+/*第二屏*/
+.second {
+    text-align: center;
+    color: #fff;
+    background: #080e24 url("../images/bg2.jpg") repeat;
+}
+.star {
+    position: absolute;
+    top: 50%;
+    left: 100px;
+    margin-top: -280px;
+}
+.star ul {
+    width: 600px;
+    height: 600px;
+    margin: 0 auto;
+    list-style: none;
+    position: relative;
+}
+.star li {
+    border: 1px solid #394057;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    border-radius: 50%;
+    animation-name: starmove;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+.star span {
+    width: 12px;
+    height: 12px;
+    position: absolute;
+    left: 50%;
+    top: 0;
+    transform: translate(-50%,-50%);
+    border-radius: 50%;
+}
+.star li:nth-child(1) {
+    width: 60px;
+    height: 60px;
+    border: none;
+    background-color: #c90;
+    box-shadow: 0 0 50px #c90;
+    animation-duration: 5s;
+}
+.star li:nth-child(2) {
+    width: 120px;
+    height: 120px;
+    animation-duration: 6s;
+}
+.star li:nth-child(2) span {
+    background-color: yellow;
+}
+.star li:nth-child(3) {
+    width: 180px;
+    height: 180px;
+    animation-duration: 10s;
+}
+.star li:nth-child(3) span {
+    background-color: blue;
+}
+.star li:nth-child(4) {
+    width: 240px;
+    height: 240px;
+    animation-duration: 12s;
+}
+.star li:nth-child(4)>span {
+    background-color: green;
+    animation: starmove 2s linear infinite;
+}
+.star li:nth-child(4)>span span {
+    width: 6px;
+    height: 6px;
+    top: -8px;
+    background-color: yellow;
+}
+.star li:nth-child(5) {
+    width: 300px;
+    height: 300px;
+    background-image: url("../images/asteroids_meteorids.png");
+    background-size: cover;
+    animation-duration: 25s;
+}
+.star li:nth-child(5) span {
+    background-color: red;
+}
+.star li:nth-child(6) {
+    width: 360px;
+    height: 360px;
+    animation-duration: 20s;
+}
+.star li:nth-child(6) span {
+    background-color: #CCC;
+}
+.star li:nth-child(7) {
+    width: 420px;
+    height: 420px;
+    animation-duration: 30s;
+}
+.star li:nth-child(7)>span {
+    background-color: green;
+}
+.star li:nth-child(7)>span span {
+    width: 15px;
+    height: 15px;
+    border: 2px solid #CCC;
+    left: -4px;
+    top: -4px;
+    transform: skew(0deg, 45deg);
+}
+@keyframes starmove {
+    0% {
+        transform: translate(-50%,-50%) rotate(0deg);
+    }
+    100% {
+        transform: translate(-50%,-50%) rotate(360deg);
+    }
+}
+.second .info {
+    position: absolute;
+    top: 50%;
+    right: 300px;
+    margin-top: -70px;
+}
+.second .title1 {
+    font-size: 60px;
+    line-height: 120px;
+}
+.second .title2 {
+    font-size: 30px;
+    line-height: 60px;
+}
+
+/*第三屏*/
+.third {
+    background: url("../images/bg3.jpg") no-repeat;
+    background-size: cover;
+}
+.stars {
+    position: absolute;
+    top: 50%;
+    width: 3840px;
+    height: 220px;
+    margin-top: -200px;
+    overflow: hidden;
+}
+.stars ul {
+    width: 7680px;
+    height: 220px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 0;
+    padding: 0;
+    animation: starsmove 42s linear infinite;
+}
+.stars ul:hover {
+    animation-play-state: paused;
+}
+.stars li {
+    float: left;
+    margin: 10px;
+}
+.stars img {
+    display: block;
+    height: 200px;
+    width: 300px;
+}
+@keyframes starsmove {
+    0%{
+        left: 0;
+    }
+    100%{
+        left: -3840px;
+    }
+}
+.third .info {
+    line-height: 30px;
+    color: #fff;
+    position: absolute;
+    top: 60%;
+    left: 100px;
+}
+.third .title1 {
+    font-size: 14px;
+}
+.third .title1 span {
+    font-size: 20px;
+    font-weight: 700;
+}
+.third .title2 {
+    font-size: 14px;
+}
+.third .title2 span {
+    font-size: 20px;
+    font-weight: 700;
+    color: red;
+}
+
+/*第四屏*/
+.fourth {
+    background: url("../images/bg4.jpg") no-repeat;
+    background-size: cover;
+}
+.fourth .title {
+    text-align: center;
+    color: #fff;
+    font-size: 80px;
+    line-height: 160px;
+    opacity: 0;
+    text-shadow: 8px 8px 8px #000;
+    margin-top: 100px;
+}
+.fourth .progress {
+    width: 400px;
+    height: 20px;
+    margin: 0 auto;
+    position: relative;
+}
+.progress .box {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg,
+        #000 0%,
+        #000 25%,
+        yellow 25%,
+        yellow 50%,
+        #000 50%,
+        #000 75%,
+        yellow 75%,
+        yellow 100%
+    );
+    background-size: 20px 100%;
+    opacity: 0;
+    animation: progressmove 20s linear infinite 3.5s;
+}
+.topline,
+.rightline,
+.bottomline,
+.leftline {
+    position: absolute;
+    background-color: rgba(255, 255, 255, 0.5);
+    opacity: 0;
+}
+.topline,
+.bottomline {
+    width: 400px;
+    height: 1px;
+}
+.rightline,
+.leftline {
+    height: 400px;
+    width: 1px;
+}
+.topline {
+    top: 0;
+    transform: translateX(-100%);
+}
+.bottomline {
+    bottom: 0;
+    transform: translateX(100%);
+}
+.rightline {
+    right: 0;
+    top: 0;
+    transform: translateY(-100%);
+}
+.leftline {
+    left: 0;
+    top: 0;
+    transform: translateY(100%);
+}
+.fourth .backtop {
+    height: 22px;
+    width: 80px;
+    text-align: center;
+    color: #fff;
+    margin: 150px auto 0;
+}
+.backtop a {
+    color: #fff;
+    font-size: 12px;
+}
+.fourth .footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 60px;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+.footer .copy {
+    color: #fff;
+}
+.footer span {
+    margin-left: 20px;
+    line-height: 60px;
+    font-size: 14px;
+}
+.footer a {
+    margin-left: 5px;
+    font-size: 10px;
+    color: #fff;
+}
+.footer a:hover {
+    color: deepskyblue;
+}
+.fourth.current .title {
+    transition: all 1.5s linear;
+    opacity: 1;
+}
+.fourth.current .topline {
+    transition: all 1s ease-in-out 1.5s;
+    transform: translateX(0);
+    opacity: 1;
+}
+.fourth.current .bottomline {
+    transition: all 1s ease-in-out 1.5s;
+    transform: translateX(0);
+    opacity: 1;
+}
+.fourth.current .rightline {
+    transition: all 1s ease-in-out 1.5s;
+    transform: translateY(0);
+    opacity: 1;
+    height: 20px;
+}
+.fourth.current .leftline {
+    transition: all 1s ease-in-out 1.5s;
+    transform: translateY(0);
+    opacity: 1;
+    height: 20px;
+}
+.fourth.current .box {
+    transition: all 1s ease-in-out 2.5s;
+    opacity: 1;
+}
+@keyframes progressmove {
+    0%{
+        background-position: 0px center;
+    }
+    100%{
+        background-position: 400px center;
+    }
+}
+
+/*每屏底部小图标*/
+.foot {
+    height: 30px;
+    width: 150px;
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    margin-left: -75px;
+    z-index: 999;
+    color: #fff;
+    text-align: center;
+}
+.foot p {
+    font-size: 12px;
+}
+.foot i {
+    display: block;
+    font-size: 16px;
+    animation: footmove 0.4s infinite alternate linear;
+}
+@keyframes footmove {
+    0%{
+        margin-top: -5px;
+    }
+    100%{
+        margin-top: 0;
+    }
+}
+
+/*侧边栏*/
+#menu {
+    position: fixed;
+    top: 50%;
+    margin-top: -65px;
+    right: 20px;
+}
+#menu li {
+    margin-top: 30px;
+}
+#menu li:nth-child(1) {
+    margin-top: 0;
+}
+#menu a {
+    display: block;
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    background-color: #666;
+    opacity: 0.8;
+}
+#menu .active a {
+    background-color: #ccc;
+}

@@ -1,0 +1,75 @@
+body,html {
+    margin: 0;
+    padding: 0;
+    font-family: "microsoft yahei"
+}
+li {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+}
+input {
+    margin: 0;
+    padding: 0;
+}
+@media (max-width:1920px) {
+    html {
+        font-size: 140.56px
+    }
+}
+@media (max-width:1680px) {
+    html {
+        font-size: 122.99px
+    }
+}
+@media (max-width:1600px) {
+    html {
+        font-size: 117.13px
+    }
+}
+@media (max-width:1440px) {
+    html {
+        font-size: 105.41px
+    }
+}
+@media (max-width:1366px) {
+    html {
+        font-size: 100px
+    }
+}
+@media (max-width:1280px) {
+    html {
+        font-size: 93.7px
+    }
+}
+@media (max-width:1152px) {
+    html {
+        font-size: 84.33px
+    }
+}
+@media (max-width:1000px) {
+    html {
+        font-size: 73.21px
+    }
+}
+@media (max-width:900px) {
+    html {
+        font-size: 65.89px
+    }
+}
+@media (max-width:960px) {
+    html {
+        font-size: 70.28px
+    }
+}
+@media (max-width:640px) {
+    html {
+        font-size: 46.85px
+    }
+}
+@media (max-width:400px) {
+    html {
+        font-size: 29.28px
+    }
+}

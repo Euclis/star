@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>星空的名义</title>
+    <link rel="shortcut icon" href="images/favicon.ico">
+    <link rel="stylesheet" href="css/jquery.fullPage.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/public.css">
+    <link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+    <!--顶部-->
+    <div class="top-nav">
+        <div class="icon">
+            <a href="#"></a>
+        </div>
+        <div class="nav">
+            <ul>
+                <li><a href="#firstPage">首页</a></li>
+                <li><a href="#">动态壁纸</a></li>
+                <li><a href="#"><i class="icon-comments"></i> 论坛</a></li>
+                <li id="register"><a href="#"><i class="icon-user"></i> 注册</a></li>
+                <li><a href="#"><i class="icon-search"></i> 搜索</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div id="fullpage">
+        <!--第一屏-->
+        <div class="section first">
+            <div class="title1">以 星 空 的 名 义</div>
+            <div class="title2">我们相信，所以我们期待</div>
+            <div class="downloadBtn">立即下载</div>
+            <div class="foot">
+                <p>滚动向下，继续浏览</p>
+                <i>﹀</i>
+            </div>
+        </div>
+        <!--第二屏-->
+        <div class="section second">
+            <div class="star">
+                <ul>
+                    <li></li>
+                    <li><span></span></li>
+                    <li><span></span></li>
+                    <li><span><span></span></span></li>
+                    <li><span></span></li>
+                    <li><span></span></li>
+                    <li><span><span></span></span></li>
+                </ul>
+            </div>
+            <div class="info">
+                <div class="title1">浩 瀚 星 辰</div>
+                <div class="title2">带你领略不一样的美！</div>
+            </div>
+            <div class="foot">
+                <p>滚动向下，继续浏览</p>
+                <i>﹀</i>
+            </div>
+        </div>
+        <!--第三屏-->
+        <div class="section third">
+            <div class="stars">
+                <ul>
+                    <li><img data-src="images/star1.jpg"></li>
+                    <li><img data-src="images/star2.jpg"></li>
+                    <li><img data-src="images/star3.jpg"></li>
+                    <li><img data-src="images/star4.jpg"></li>
+                    <li><img data-src="images/star5.jpg"></li>
+                    <li><img data-src="images/star6.jpg"></li>
+                    <li><img data-src="images/star7.jpg"></li>
+                    <li><img data-src="images/star8.jpg"></li>
+                    <li><img data-src="images/star9.jpg"></li>
+                    <li><img data-src="images/star10.jpg"></li>
+                    <li><img data-src="images/star11.jpg"></li>
+                    <li><img data-src="images/star12.jpg"></li>
+                    <li><img data-src="images/star1.jpg"></li>
+                    <li><img data-src="images/star2.jpg"></li>
+                    <li><img data-src="images/star3.jpg"></li>
+                    <li><img data-src="images/star4.jpg"></li>
+                    <li><img data-src="images/star5.jpg"></li>
+                    <li><img data-src="images/star6.jpg"></li>
+                    <li><img data-src="images/star7.jpg"></li>
+                    <li><img data-src="images/star8.jpg"></li>
+                    <li><img data-src="images/star9.jpg"></li>
+                    <li><img data-src="images/star10.jpg"></li>
+                    <li><img data-src="images/star11.jpg"></li>
+                    <li><img data-src="images/star12.jpg"></li>
+                </ul>
+            </div>
+            <div class="info">
+                <div class="title1">壁纸总数：<span>18746</span></div>
+                <div class="title2">今日新增：<span>13 <i class="icon-arrow-up"></i></span></div>
+            </div>
+            <div class="foot">
+                <p>滚动向下，继续浏览</p>
+                <i>﹀</i>
+            </div>
+        </div>
+        <!--第四屏-->
+        <div class="section fourth">
+            <div class="title">星空计划 启动中</div>
+            <div class="progress">
+                <div class="box"></div>
+                <div class="topline"></div>
+                <div class="rightline"></div>
+                <div class="bottomline"></div>
+                <div class="leftline"></div>
+            </div>
+            <div class="backtop">
+                <a href="#firstPage">返回顶部 <i class="icon-double-angle-up"></i></a>
+            </div>
+            <div class="footer">
+                <div class="copy">
+                    <span>友情链接：</span>
+                    <a href="javascript:;">XXX</a>
+                    <a href="javascript:;">XX</a>
+                    <a href="javascript:;">XXXX</a>
+                    <a href="javascript:;">XXXXX</a>
+                    <a href="javascript:;">XXXXXX</a>
+                    <a href="javascript:;">XXXXXX</a>
+                    <a href="javascript:;">XXXXXX</a>
+                    <a href="javascript:;">XXXXXX</a>
+                    <a href="javascript:;">XXXXXX</a>
+                    <a href="javascript:;">XXXXXX</a>
+                    <a href="javascript:;">XXXXXX</a>
+                    <a href="javascript:;">XXXXXX</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--注册框-->
+    <div class="registerbox">
+        <form id="ajaxForm" autocomplete="off">
+            <ul>
+                <li>
+                    <label for="name">用户名：</label>
+                    <input type="text" name="name" class="name" id="name" placeholder="不能为空">
+                    <i></i>
+                </li>
+                <li>
+                    <label for="pass">请设置密码：</label>
+                    <input type="password" name="pass" class="pass" id="pass" placeholder="至少6位数">
+                    <i></i>
+                </li>
+                <li>
+                    <label for="repass">请确认密码：</label>
+                    <input type="password" name="repass" class="repass" id="repass" placeholder="至少6位数">
+                    <i></i>
+                </li>
+                <li>
+                    <label for="mobile">请输入手机号：</label>
+                    <input type="text" name="mobile" class="mobile" id="mobile">
+                    <i></i>
+                </li>
+                <li>
+                    <label for="code">请输入验证码：</label>
+                    <input type="text" name="code" class="code" id="code">
+                    <input type="button" value="获取验证码" class="getcode">
+                    <i></i>
+                </li>
+                <li>
+                    <label></label>
+                    <input type="button" value="立即注册">
+                </li>
+            </ul>
+        </form>
+        <div class="delete"><i class="icon-remove"></i></div>
+    </div>
+
+    <!--侧边栏-->
+    <ul id="menu">
+        <li class="active" data-menuanchor="firstPage"><a href="#firstPage"></a></li>
+        <li data-menuanchor="secondPage"><a href="#secondPage"></a></li>
+        <li data-menuanchor="thirdPage"><a href="#thirdPage"></a></li>
+        <li data-menuanchor="fourthPage"><a href="#fourthPage"></a></li>
+    </ul>
+
+    <script src="js/jquery-1.11.1.min.js"></script>
+    <script src="js/jquery.fullPage.min.js"></script>
+    <script src="js/index.js"></script>
+    
+</body>
+</html>
