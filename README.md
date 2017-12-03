@@ -7,3 +7,11 @@
 3、单屏特效使用了css3
 
 4、注册框使用了ajax技术
+
+![Alt text](https://github.com/Euclis/star/raw/master/screenshots/star-1.png)
+
+![Alt text](https://github.com/Euclis/star/raw/master/screenshots/star-2.png)
+
+![Alt text](https://github.com/Euclis/star/raw/master/screenshots/star-3.png)
+
+![Alt text](https://github.com/Euclis/star/raw/master/screenshots/star-4.png)
